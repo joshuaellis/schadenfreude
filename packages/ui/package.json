@@ -14,7 +14,7 @@
     "eslint": "^7.32.0",
     "eslint-config-schadenfreude": "workspace:*",
     "react": "^18.2.0",
-    "tsconfig": "workspace:*",
+    "@schadenfreude/tsconfig": "workspace:*",
     "typescript": "^4.9.5"
   }
 }

@@ -120,4 +120,5 @@ module.exports = {
     "no-duplicate-imports": "off",
     "no-unused-vars": "off",
   },
+  ignorePatterns: ["**/dist/**", "**/node_modules/**"],
 };
