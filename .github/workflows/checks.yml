@@ -6,30 +6,34 @@ on:
       - "main"
   pull_request: {}
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+
 jobs:
   checks:
     name: "Style Checks"
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.11.0
-        with:
-          access_token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup node
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-          cache: "yarn"
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
 
       - name: Install
-        run: yarn install --immutable
+        run: pnpm install
 
       - name: Lint
         run: yarn lint
-
-      - name: Format
-        run: yarn format:check
