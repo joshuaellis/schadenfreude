@@ -1,0 +1,53 @@
+{
+  "name": "@schadenfreude/cli",
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "schadenfreude": "./bin/index.cjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "source": "./src/index.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "source": "./src/index.ts",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "bin",
+    "!dist/stats.html"
+  ],
+  "scripts": {
+    "build": "pkg-utils build --strict",
+    "dev": "pkg-utils watch",
+    "lint": "eslint \"**/*.ts*\"",
+    "test:ts": "tsc --noEmit",
+    "test:unit": "vitest run",
+    "verify": "pkg-utils check"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "read-pkg-up": "^10.0.0"
+  },
+  "devDependencies": {
+    "@sanity/pkg-utils": "^2.4.5",
+    "@schadenfreude/tsconfig": "workspace:*",
+    "@types/node": "^20.4.9",
+    "eslint-config-schadenfreude": "workspace:*",
+    "rollup-plugin-visualizer": "^5.9.2",
+    "typescript": "^5.0.3",
+    "vitest": "^0.34.1"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

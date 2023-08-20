@@ -1,0 +1,7 @@
+{
+  "extends": "@schadenfreude/tsconfig/node",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}
