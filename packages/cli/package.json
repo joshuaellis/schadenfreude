@@ -41,11 +41,11 @@
   "devDependencies": {
     "@sanity/pkg-utils": "^2.4.9",
     "@schadenfreude/tsconfig": "workspace:*",
-    "@types/node": "^20.6.3",
+    "@types/node": "^20.8.0",
     "eslint-config-schadenfreude": "workspace:*",
     "rollup-plugin-visualizer": "^5.9.2",
     "typescript": "^5.2.2",
-    "vitest": "^0.34.4"
+    "vitest": "^0.34.6"
   },
   "engines": {
     "node": ">=16.20.2"
