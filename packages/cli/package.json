@@ -39,9 +39,9 @@
     "read-pkg-up": "^10.1.0"
   },
   "devDependencies": {
-    "@sanity/pkg-utils": "^3.1.1",
+    "@sanity/pkg-utils": "^3.2.2",
     "@schadenfreude/tsconfig": "workspace:*",
-    "@types/node": "^20.8.7",
+    "@types/node": "^20.8.10",
     "eslint-config-schadenfreude": "workspace:*",
     "rollup-plugin-visualizer": "^5.9.2",
     "typescript": "^5.2.2",
