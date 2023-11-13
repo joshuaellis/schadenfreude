@@ -41,7 +41,7 @@
   "devDependencies": {
     "@sanity/pkg-utils": "^3.2.3",
     "@schadenfreude/tsconfig": "workspace:*",
-    "@types/node": "^20.8.10",
+    "@types/node": "^20.9.0",
     "eslint-config-schadenfreude": "workspace:*",
     "rollup-plugin-visualizer": "^5.9.2",
     "typescript": "^5.2.2",
